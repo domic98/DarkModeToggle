@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+    margin: 0;
+    font: normal 75% Arial, Helvetica, sans-serif;
+    display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+      transition: .4s;
+  }
+  
+
+ 
+  @media (prefers-color-scheme: dark) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #fff;
+    }
+  
+    #theme-buttons {
+      background-color: #333333cc !important;
+    }
+  }
+  
+  canvas {
+    display: block;
+   
+  }
+  /* ---- tsparticles container ---- */
+  #tsparticles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  .input {
+      visibility: hidden;
+  }
+  
+  .label {
+      position: relative;
+      width: 80px;
+      height: 40px;
+      background-color: #292c35;
+      border-radius: 50px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: space-around;
+      display: flex;
+      padding: 5x;
+  }
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+  
+  .circle {
+     
+      width: 34px;
+      background-color: darkgray;
+      height: 34px;
+      border-radius: 20px;
+      top: 3px;
+      position: absolute;
+      left: 3px;
+      animation: toggleOff .4s linear forwards;
+  }
+  
+  
+  .input:checked + .label {
+      background-color: #292c35;
+  
+  }
+  
+  .input:checked + .label .circle {
+      animation: toggleOn .4s linear forwards;
+      background-color: lightgray;
+      
+
+
+
+  }
+  
+  @keyframes toggleOn {
+      0% {
+          transform: translateX(0);
+      }
+      
+      100% {
+          transform: translateX(40px);
+      }
+  }
+  
+  
+  @keyframes toggleOff {
+      0% {
+          transform: translateX(40px);
+      }
+      
+      100% {
+          transform: translateX(0);
+      }
+  }
